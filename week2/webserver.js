@@ -4,6 +4,7 @@ var app = express()
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
+  console.log('new log in')
 })
 
 app.listen(3000, function () {
