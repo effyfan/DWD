@@ -1,0 +1,50 @@
+<!-- api1 = api.openweathermap.org/data/2.5/weather?q=London&appid=f2d43e6c463d6cb45ded587e92dcf0ad&units=metric
+api2 = api.openweathermap.org/data/2.5/weather?q=New%20York&appid=f2d43e6c463d6cb45ded587e92dcf0ad&units=metric -->
+
+
+<html>
+
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $('document').ready(function() {
+      $('#getweather').click(function() {
+          $.ajax({
+              url: "http://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=f2d43e6c463d6cb45ded587e92dcf0ad&units=metric",
+              data: {},
+              success: function(result) {
+                $('#result').html("The tempeture in NYC is" + result.main.temp);
+              },
+              error: function(err) {
+                alert(err);
+              }
+            });
+          });
+        });
+  </script>
+</head>
+
+
+
+<body>
+  <button id="getweather">Get Weather</button>
+  <div id="result"></div>
+</body>
+</html>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $.ajax({
+    url: "http://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=f2d43e6c463d6cb45ded587e92dcf0ad&units=metric",
+    dataType: 'json',
+    success: function(data) {
+    alert("Temperature is: " + data.main.temp );
+    },
+    error: function() {
+    alert("error");
+    }
+  });
+});
+</script> -->
