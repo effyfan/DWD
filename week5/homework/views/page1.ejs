@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <!-- <script type="text/javascript">
+  let url = "http://api.openweathermap.org/data/2.5/weather?q=" + "<%=city%>" + "&appid=f2d43e6c463d6cb45ded587e92dcf0ad&units=metric";
+    $('document').ready(function() {
+          $.ajax({
+              url: url,
+              // url: "http://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=f2d43e6c463d6cb45ded587e92dcf0ad&units=metric",
+              data: {},
+              success: function(result) {
+                // $('#temp').val(result.main.temp); //send tempeture to mongo
+                // $('#formid').submit();
+                $('#result').html("The tempeture in <%=city%> is " + result.main.temp);
+              },
+              error: function(err) {
+                alert(err);
+              }
+            });
+        });
+  </script> -->
+</head>
+<body>
+  <h4>Hello <%=name%>, Your current city is <%=city%></h4>
+  <h4>Today your mood is 5</h4>
+  <!-- <p>The tempeture in <%=city%> is <%=temp%></p> -->
+  <div id="result"><%=temp%></div>
+</body>
+</html>
